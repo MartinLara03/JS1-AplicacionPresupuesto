@@ -10,7 +10,7 @@ descripción con el valor que se está recibiendo.
 • Crea los métodos set y get para el atributo valor de la misma manera que se realizó para el 
 atributo descripción con sus respectivos valores.
 • Recuerda que es importante encapsular los datos */
-
+/*
 class Dato {
     constructor(descripcion, valor) {
       this._descripcion = descripcion;
@@ -34,4 +34,4 @@ class Dato {
     }
   };
 
- 
+ */
