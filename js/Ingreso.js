@@ -66,4 +66,15 @@
      btnEliminarIngreso.classList.add("elemento_eliminar--btn");
    }
  });
+ function eliminarElemento(elementId) {
+  console.log(elementId);
+  var elementoAEliminar = document.getElementById(elementId);
+  if (elementoAEliminar) {
+      elementoAEliminar.remove(); 
+      cargarEgresos();
+      cargarIngresos();
+      limpiarValores();
+  }
+}
+
  

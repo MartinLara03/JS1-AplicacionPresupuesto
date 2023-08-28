@@ -53,6 +53,7 @@ function agregarElemento(descripcion, valor, tipo_resultado) {
   div6.id = eliminarElementId;
   document.getElementById(rightElementId).appendChild(div6);
 
+
   //boton eliminar
   var botonEliminarId = "btneliminar" + ing;
   var btnEliminarIngreso = document.createElement("button");
@@ -61,12 +62,31 @@ function agregarElemento(descripcion, valor, tipo_resultado) {
   btnEliminarIngreso.id = botonEliminarId;
   btnEliminarIngreso.classList.add("elemento_eliminar--btn");
   document.getElementById(eliminarElementId).appendChild(btnEliminarIngreso);
+  document.getElementById(eliminarElementId).appendChild(btnEliminarIngreso);
+  btnEliminarIngreso.addEventListener("click", () => {
+    console.log(1);
+    eliminarElemento(mainElementId);
+  });
 }
+
+function eliminarElemento(elementId) {
+  console.log(elementId);
+  var elementoAEliminar = document.getElementById(elementId);
+  if (elementoAEliminar) {
+    elementoAEliminar.remove();
+    cargarEgresos();
+    cargarIngresos();
+    limpiarValores();
+  }
+}
+
+
+
 
 function limpiarValores() {
   document.getElementById("descripcion").value = "";
   document.getElementById("valor").value = null;
-}
+};
 
 document.getElementById("agregarbtn").addEventListener("click", (e) => {
   var tipo_resultado = document.getElementById("tipo").value;

@@ -47,11 +47,6 @@ console.log("La suma total es: " + suma);
 
 
 
-
-
-
-
-
 /*
 var totalIngresos = () => {
     const totalIngreso = 0;
